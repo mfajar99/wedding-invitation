@@ -15,17 +15,19 @@ export const weddingConfig = {
    },
    wedding: {
       date: "2026-05-31T07:00:00",
-      venue: {
+      venue: { 
          ceremony: {
             name: "Kediaman mempelai wanita",
             address: "Dusun Ram-aram, Desa. Masaran, Kec. Banyuates, Kab. Sampang",
             time: "19:30 WIB",
+            date: "30-Mei-2026",
             mapUrl: "https://maps.app.goo.gl/L18om9qBmDtKtJr27"
          },
          reception: {
             name: "Kediaman mempelai pria",
             address: "Dusun Seneng, Desa. Nepa, Kec. Banyuates, Kab. Sampang",
             time: "07:00 WIB",
+            date: "31-Mei-2026",
             mapUrl: "https://maps.app.goo.gl/jRgqapt3uBLCEjzV9"
          }
       },

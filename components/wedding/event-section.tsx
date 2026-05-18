@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaChurch, FaGlassCheers, FaMapMarkerAlt, FaClock, FaHome } from 'react-icons/fa'
+import { FaChurch, FaGlassCheers, FaMapMarkerAlt, FaClock, FaHome, FaCalendar } from 'react-icons/fa'
 import { weddingConfig } from '@/lib/wedding-config'
 import { FaCar } from 'react-icons/fa6';
 
@@ -13,11 +13,12 @@ interface EventCardProps {
    venue: string
    address: string
    time: string
+   date: string
    mapUrl: string
    delay?: number
 }
 
-function EventCard({ icon, title, venue, address, time, mapUrl, delay = 0 }: EventCardProps) {
+function EventCard({ icon, title, venue, address, time, date, mapUrl, delay = 0 }: EventCardProps) {
    const ref = useRef(null)
    const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -51,6 +52,8 @@ function EventCard({ icon, title, venue, address, time, mapUrl, delay = 0 }: Eve
          <div className="flex items-center justify-center gap-2 text-muted-foreground mb-6">
             <FaClock className="w-4 h-4 text-primary/50" />
             <p className="text-sm">{time}</p>
+             <FaCalendar className="w-4 h-4 text-primary/50" />
+            <p className="text-sm">{date}</p>
          </div>
 
          <a
@@ -108,6 +111,7 @@ export function EventSection() {
                venue={weddingConfig.wedding.venue.ceremony.name}
                address={weddingConfig.wedding.venue.ceremony.address}
                time={weddingConfig.wedding.venue.ceremony.time}
+               date={weddingConfig.wedding.venue.ceremony.date}
                mapUrl={weddingConfig.wedding.venue.ceremony.mapUrl}
                delay={0.2}
             />
@@ -118,6 +122,7 @@ export function EventSection() {
                venue={weddingConfig.wedding.venue.reception.name}
                address={weddingConfig.wedding.venue.reception.address}
                time={weddingConfig.wedding.venue.reception.time}
+               date={weddingConfig.wedding.venue.reception.date}
                mapUrl={weddingConfig.wedding.venue.reception.mapUrl}
                delay={0.4}
             />

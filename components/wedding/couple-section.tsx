@@ -45,7 +45,7 @@ import { weddingConfig } from '@/lib/wedding-config'
 //    )
 // }
 
-// // Elegant female silhouette illustration with hijab
+// Elegant female silhouette illustration with hijab
 // function FemaleIllustration() {
 //    return (
 //       <svg viewBox="0 0 200 280" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,9 +110,9 @@ function CoupleCard({
          animate={isInView ? { opacity: 1, y: 0 } : {}}
          transition={{ duration: 0.8, delay }}
       >
-         <div className="relative mb-8">
+         <div className="relative">
             {/* Decorative frame */}
-            <div className="absolute -inset-3 border border-primary/10 rounded-full" />
+            {/* <div className="absolute -inset-3 border border-primary/10 rounded-full" /> */}
             
             {/* <div className="relative w-40 h-56 md:w-48 md:h-64 overflow-hidden flex items-center justify-center">
                {gender === 'male' ? <MaleIllustration /> : <FemaleIllustration />}
